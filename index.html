@@ -1,0 +1,26 @@
+
+<html >
+<head>
+  <title> WELCOME TO PREDICTION MODEL </title>
+</head>
+<body>
+ <div>
+	<h1>PREDICTION MODEL FOR CEMENT MIXTURE</h1>
+  <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Material Quantity (gm)," placeholder="Material Quantity (gm)," required="required" />
+      <input type="text" name="Additive Catalyst (gm)," placeholder="Additive Catalyst (gm)" required="required" />
+      <input type="text" name="Ash Component (gm) " placeholder="Ash Component (gm)" required="required" />
+      <input type="text" name="Water Mix (ml)," placeholder="Water Mix (ml)" required="required" />
+      <input type="text" name="Plasticizer (gm)," placeholder="Plasticizer (gm)" required="required" />
+      <input type="text" name="Moderate Aggregator" placeholder="Moderate Aggregator" required="required" />
+      <input type="text" name="Refined Aggregator" placeholder="Refined Aggregator" required="required" />
+      <input type="text" name="Formulation Duration (hrs)" placeholder="Formulation Duration (hrs)" required="required" />
+      <button type="submit" >Predict</button>
+  </form>
+
+  <br>
+  <br>
+  {{ prediction_text }}
+ </div>
+</body>
+</html>
